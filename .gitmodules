@@ -1,0 +1,3 @@
+[submodule "chat-demo"]
+	path = chat-demo
+	url = https://github.com/deepseek-ai/chat-demo.git

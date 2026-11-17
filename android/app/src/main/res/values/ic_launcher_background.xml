@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#3B5BDB</color>
+    <!-- 与 chat-demo 页面背景一致，避免启动和系统栏留白闪色 -->
+    <color name="app_background">#FFFFFF</color>
+</resources>

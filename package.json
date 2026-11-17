@@ -1,0 +1,22 @@
+{
+  "name": "deepseek-chat",
+  "version": "0.1.0",
+  "description": "DeepSeek Chat 安卓 App：用 Capacitor 打包 chat-demo。",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:web": "node scripts/build-web.mjs",
+    "sync": "pnpm build:web && cap sync android",
+    "apk:debug": "pnpm sync && cd android && ./gradlew assembleDebug",
+    "apk:release": "pnpm sync && cd android && ./gradlew assembleRelease",
+    "open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.6.2",
+    "@capacitor/core": "8.6.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.2"
+  }
+}

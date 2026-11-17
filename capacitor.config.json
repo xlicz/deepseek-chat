@@ -1,0 +1,13 @@
+{
+  "appId": "com.deepseekchat.android",
+  "appName": "DeepSeek Chat",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "css"
+    }
+  }
+}

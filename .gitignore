@@ -1,0 +1,9 @@
+node_modules/
+www/
+*.log
+.DS_Store
+tmp/
+# 签名密钥与密码不入库
+*.jks
+*.keystore
+android/keystore.properties
