@@ -69,6 +69,16 @@ summary{cursor:pointer;font-weight:600}
 details p{margin:8px 0 0;color:var(--muted)}
 footer{margin:56px 0 0;padding:24px 0 56px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+@media (max-width:600px){
+.facts tr{display:block;padding:10px 0;border-bottom:1px solid var(--line)}
+.facts tr:last-child{border-bottom:0}
+.facts th,.facts td{display:block;border:0;padding:0}
+.facts th{white-space:normal;font-size:13px;margin-bottom:2px}
+.facts td{font-size:15px}
+h2{margin-top:34px}
+.summary-hint{display:block;font-size:13px;color:var(--muted);margin:-4px 0 8px}
+}
+@media (min-width:601px){.summary-hint{display:none}}
 </style>
 </head>
 <body>
@@ -90,7 +100,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;back
 
 <h2>关键事实</h2>
 <div class="scroll">
-<table>
+<table class="facts">
 <tbody>
 <tr><th>应用名</th><td>DeepSeek Chat</td></tr>
 <tr><th>包名</th><td><code>com.deepseekchat.android</code></td></tr>
@@ -127,6 +137,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;back
 <p class="note">安装包没有上架任何应用商店。下载后建议核对 SHA-256，每个 Release 的正文里都写了对应值。</p>
 
 <h2>和官方 App、网页版的区别</h2>
+<p class="summary-hint">左右滑动查看完整对比</p>
 <div class="scroll">
 <table>
 <thead><tr><th></th><th>本 App（非官方）</th><th>官方 App</th><th>浏览器网页版</th></tr></thead>
