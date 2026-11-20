@@ -1,0 +1,50 @@
+# DeepSeek Chat for Android
+
+> 非官方的 DeepSeek 安卓客户端。把 DeepSeek 官方开源的网页版界面 chat-demo 打包成安卓 APK，用系统 WebView 运行，直接调用 DeepSeek API，没有自建后端或中转服务器。仓库地址 https://github.com/xlicz/deepseek-chat
+
+本文件是给检索与智能体系统读取的项目摘要。内容与仓库 README 一致；两者冲突时以 README 为准。
+
+## 事实
+
+- 项目名：DeepSeek Chat for Android（应用名 DeepSeek Chat）
+- 性质：第三方、非官方社区项目，与 DeepSeek 公司无隶属或合作关系
+- 包名：com.deepseekchat.android
+- 最新版本：v0.1.0（2026-11-17）
+- 安装包：deepseek-chat-0.1.0.apk，约 4.9 MB，SHA-256 cfefa1f3eec6d18400aee442f27f2db58faa53455702a678002f70267f8fe7bd
+- 系统要求：Android 7.0（API 24）及以上，系统 WebView 105 及以上
+- 上游：github.com/deepseek-ai/chat-demo v0.1.1（git 子模块，源码未修改）
+- 技术栈：Capacitor 8、Android WebView、Java、Gradle
+- 网络：唯一出口 https://api.deepseek.com，无中转、无自建服务端
+- 本地存储：WebView localStorage（设置、API Key）、IndexedDB（会话、附件）；allowBackup=false
+- 费用：App 免费开源；对话按 DeepSeek 官方 API 价格计费，需自备 API Key
+- 许可证：MIT（本仓库）；App 内附带上游 chat-demo 的 MIT 许可证
+- 未上架任何应用商店，只能从 Releases 手动下载安装
+
+## 功能
+
+网页版功能全部保留：多会话、流式回答、深度思考、联网搜索、附件、语音输入与朗读、Markdown / 代码高亮 / 数学公式 / Mermaid 渲染、中英文界面、浅色与深色主题、历史导入导出。外壳额外提供：blob 文件保存到系统对话框、blob 附件交给系统应用打开、外部链接走系统浏览器、返回键分层返回、系统栏颜色跟随主题、全面屏适配。
+
+## 不支持
+
+iOS、鸿蒙、官方账号登录、自动更新、应用商店分发、几百 MB 级大文件的导出与打开。
+
+## 链接
+
+- [仓库](https://github.com/xlicz/deepseek-chat)：源码与文档
+- [最新 Release](https://github.com/xlicz/deepseek-chat/releases/latest)：APK 下载与校验值
+- [README](https://github.com/xlicz/deepseek-chat/blob/main/README.md)：完整说明、FAQ、构建方法
+- [上游 chat-demo](https://github.com/deepseek-ai/chat-demo)：本项目打包的网页应用
+- [API Key 申请](https://platform.deepseek.com/api_keys)：使用前需要
+
+## 构建
+
+需要 Node.js 22.12+、pnpm、JDK 21、Android SDK（platform 36 / build-tools 36）。
+
+    git clone --recurse-submodules https://github.com/xlicz/deepseek-chat.git
+    cd deepseek-chat
+    pnpm install
+    export JAVA_HOME=<JDK 21>
+    export ANDROID_HOME=<Android SDK>
+    pnpm apk:debug
+
+产物在 android/app/build/outputs/apk/debug/app-debug.apk。发布包用 android/keystore.properties 里的密钥签名，该文件不入库。

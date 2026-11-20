@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSeek Chat for Android — 非官方安卓客户端 APK 下载</title>
+<meta name="description" content="把 DeepSeek 官方开源的网页版 chat-demo 打包成安卓 APK 的非官方客户端。免费开源，直连 DeepSeek API，无中转，支持语音、附件、深度思考。Android 7.0+。">
+<meta name="keywords" content="DeepSeek, DeepSeek 安卓客户端, DeepSeek APK, 非官方客户端, chat-demo, Android, Capacitor, WebView">
+<meta name="author" content="xlicz">
+<link rel="canonical" href="https://xlicz.github.io/deepseek-chat/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DeepSeek Chat for Android">
+<meta property="og:title" content="DeepSeek Chat for Android — 非官方安卓客户端">
+<meta property="og:description" content="把 DeepSeek 官方开源的网页版 chat-demo 打包成安卓 APK。免费开源，直连 API，无中转。">
+<meta property="og:url" content="https://xlicz.github.io/deepseek-chat/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DeepSeek Chat for Android — 非官方安卓客户端">
+<meta name="twitter:description" content="把 DeepSeek 官方开源的网页版 chat-demo 打包成安卓 APK。免费开源，直连 API，无中转。">
+<meta name="theme-color" content="#3B5BDB">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='24' fill='%233B5BDB'/%3E%3Cpath fill='%23fff' d='M40 34h28a10 10 0 0 1 10 10v14a10 10 0 0 1-10 10H52L38 80l3-12h-1a10 10 0 0 1-10-10V44a10 10 0 0 1 10-10z'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"SoftwareApplication","@id":"https://xlicz.github.io/deepseek-chat/#app","name":"DeepSeek Chat for Android","alternateName":"DeepSeek 安卓客户端（非官方）","description":"非官方的 DeepSeek 安卓客户端：把 DeepSeek 官方开源的网页版界面 chat-demo 打包成 APK，用系统 WebView 运行，直接调用 DeepSeek API，没有自建后端或中转服务器。","applicationCategory":"UtilitiesApplication","applicationSubCategory":"AI 对话客户端","operatingSystem":"Android 7.0+","softwareVersion":"0.1.0","fileSize":"4.9MB","isAccessibleForFree":true,"downloadUrl":"https://github.com/xlicz/deepseek-chat/releases/latest","codeRepository":"https://github.com/xlicz/deepseek-chat","license":"https://opensource.org/licenses/MIT","programmingLanguage":["Java","JavaScript"],"inLanguage":["zh-CN","en"],"author":{"@type":"Person","name":"xlicz","url":"https://github.com/xlicz"},"offers":{"@type":"Offer","price":"0","priceCurrency":"CNY","availability":"https://schema.org/InStock"},"isBasedOn":"https://github.com/deepseek-ai/chat-demo"},
+{"@type":"FAQPage","@id":"https://xlicz.github.io/deepseek-chat/#faq","mainEntity":[
+{"@type":"Question","name":"这是 DeepSeek 官方发布的 App 吗？","acceptedAnswer":{"@type":"Answer","text":"不是。这是第三方打包的社区项目，只复用官方开源的 chat-demo 网页界面。官方渠道只有应用商店里的 DeepSeek App 和 chat.deepseek.com。"}},
+{"@type":"Question","name":"用这个 App 需要付费吗？","acceptedAnswer":{"@type":"Answer","text":"App 本身免费开源。对话走 DeepSeek API，按官方价格从你自己的账户扣费，需要先在 platform.deepseek.com 申请 API Key 并充值。"}},
+{"@type":"Question","name":"支持哪些安卓版本？","acceptedAnswer":{"@type":"Answer","text":"Android 7.0（API 24）及以上，且系统 WebView 版本不低于 105。旧机型如果 WebView 版本偏低，可以从应用商店更新 Android System WebView。"}},
+{"@type":"Question","name":"和官方 App 有什么区别？","acceptedAnswer":{"@type":"Answer","text":"界面来自官方开源的网页版，功能完整，但登录用自己的 API Key 按量计费，数据只存在本机，没有官方账号体系、没有自动更新，也不上架应用商店。"}},
+{"@type":"Question","name":"APK 安全吗？怎么验证？","acceptedAnswer":{"@type":"Answer","text":"源码在 GitHub 公开，可以自行构建比对。每个 Release 都给出安装包的 SHA-256 和签名证书 SHA-256，签名使用固定的正式密钥，后续版本都用同一把，可以覆盖安装。"}},
+{"@type":"Question","name":"支持 iOS 或鸿蒙吗？","acceptedAnswer":{"@type":"Answer","text":"不支持。仓库只有 Android 工程。iPhone 可以把网页版添加到主屏幕，鸿蒙 NEXT 不在支持范围内。"}},
+{"@type":"Question","name":"会收集上传我的数据吗？","acceptedAnswer":{"@type":"Answer","text":"App 没有埋点、没有第三方统计，只有 DeepSeek API 一个网络出口。API Key 和会话存在本机 WebView 存储里，系统备份已关闭。"}}]}
+]}
+</script>
+<style>
+:root{--bg:#fff;--fg:#16181d;--muted:#5b6270;--line:#e4e7ec;--brand:#3B5BDB;--card:#f7f8fa}
+@media (prefers-color-scheme:dark){:root{--bg:#12141a;--fg:#e9ebf0;--muted:#9aa1ae;--line:#272b34;--brand:#7a92f0;--card:#191c23}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+header{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0 0 12px;letter-spacing:-.02em}
+.lead{font-size:17px;color:var(--muted);margin:0 0 24px;max-width:44em}
+.tag{display:inline-block;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin-bottom:16px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 8px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;border:1px solid transparent}
+.btn.primary{background:var(--brand);color:#fff}
+.btn.primary:hover{text-decoration:none;filter:brightness(1.06)}
+.btn.ghost{border-color:var(--line);color:var(--fg)}
+.note{font-size:14px;color:var(--muted)}
+h2{font-size:21px;margin:44px 0 14px;letter-spacing:-.01em}
+h3{font-size:16px;margin:24px 0 6px}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto}
+ul,ol{padding-left:22px}
+li{margin:4px 0}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:12px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.card b{display:block;margin-bottom:2px}
+.card span{font-size:14px;color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 0;color:var(--muted)}
+footer{margin:56px 0 0;padding:24px 0 56px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="tag">非官方项目 · 开源 · MIT</span>
+  <h1>DeepSeek Chat for Android</h1>
+  <p class="lead">把 DeepSeek 官方开源的网页版界面 <a href="https://github.com/deepseek-ai/chat-demo">chat-demo</a> 打包成安卓 APK。界面是官方的开源实现，功能完整，直接调用 DeepSeek API —— 没有自建后端，没有中转服务器。</p>
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/xlicz/deepseek-chat/releases/latest">下载 APK</a>
+    <a class="btn ghost" href="https://github.com/xlicz/deepseek-chat">查看源码</a>
+  </div>
+  <p class="note">最新版本 v0.1.0 · 约 4.9 MB · Android 7.0+ · 需要自备 DeepSeek API Key</p>
+</header>
+
+<h2>它解决什么问题</h2>
+<p>官方网页版功能齐全，但在手机上要用浏览器打开，或者「添加到主屏幕」。这个 App 把它做成真正的应用：桌面有独立图标，返回键按层级返回，导出的文件和附件能用系统对话框保存与打开。适合想用一个独立入口、又希望数据完全留在本机的安卓用户。</p>
+
+<h2>关键事实</h2>
+<div class="scroll">
+<table>
+<tbody>
+<tr><th>应用名</th><td>DeepSeek Chat</td></tr>
+<tr><th>包名</th><td><code>com.deepseekchat.android</code></td></tr>
+<tr><th>系统要求</th><td>Android 7.0（API 24）及以上，系统 WebView 105 及以上</td></tr>
+<tr><th>安装包</th><td><code>deepseek-chat-0.1.0.apk</code>，约 4.9 MB，正式密钥签名</td></tr>
+<tr><th>上游依据</th><td>chat-demo v0.1.1（git 子模块，源码未修改）</td></tr>
+<tr><th>技术栈</th><td>Capacitor 8 + Android WebView + Java + Gradle</td></tr>
+<tr><th>网络出口</th><td>仅 <code>https://api.deepseek.com</code>，无中转、无自建服务器</td></tr>
+<tr><th>本地数据</th><td>WebView localStorage（设置、API Key）与 IndexedDB（会话、附件）</td></tr>
+<tr><th>费用</th><td>App 免费开源；对话按 DeepSeek 官方 API 价格计费</td></tr>
+<tr><th>分发</th><td>未上架应用商店，只能从 GitHub Releases 手动安装</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>功能</h2>
+<div class="grid">
+  <div class="card"><b>多会话与历史</b><span>会话列表、重命名、导入导出</span></div>
+  <div class="card"><b>流式回答</b><span>逐字输出，可随时中断</span></div>
+  <div class="card"><b>深度思考</b><span>切换推理模式，查看思考过程</span></div>
+  <div class="card"><b>联网搜索</b><span>回答带引用来源</span></div>
+  <div class="card"><b>附件上传</b><span>图片与文档，原件可再打开</span></div>
+  <div class="card"><b>语音输入与朗读</b><span>调用系统语音能力</span></div>
+  <div class="card"><b>富文本渲染</b><span>Markdown、代码高亮、公式、Mermaid</span></div>
+  <div class="card"><b>深浅主题</b><span>状态栏与导航栏颜色跟随</span></div>
+</div>
+
+<h2>安装</h2>
+<ol>
+  <li>打开 <a href="https://github.com/xlicz/deepseek-chat/releases/latest">Releases</a>，下载最新版 <code>deepseek-chat-&lt;版本&gt;.apk</code>。</li>
+  <li>在手机上点开文件。提示「未知来源」或「不允许安装未知应用」时，允许当前浏览器或文件管理器安装。</li>
+  <li>打开 App，在设置里填入 <a href="https://platform.deepseek.com/api_keys">DeepSeek API Key</a>，开始对话。</li>
+</ol>
+<p class="note">安装包没有上架任何应用商店。下载后建议核对 SHA-256，每个 Release 的正文里都写了对应值。</p>
+
+<h2>和官方 App、网页版的区别</h2>
+<div class="scroll">
+<table>
+<thead><tr><th></th><th>本 App（非官方）</th><th>官方 App</th><th>浏览器网页版</th></tr></thead>
+<tbody>
+<tr><th>界面来源</th><td>官方开源项目 chat-demo</td><td>官方原生界面</td><td>官方网页</td></tr>
+<tr><th>安装方式</th><td>手动装 APK</td><td>应用商店</td><td>不需要</td></tr>
+<tr><th>桌面图标</th><td>有，独立入口</td><td>有</td><td>需「添加到主屏幕」</td></tr>
+<tr><th>登录方式</th><td>自己的 API Key，按量计费</td><td>官方账号</td><td>官方账号</td></tr>
+<tr><th>数据落地</th><td>全部在本机</td><td>官方服务端</td><td>浏览器存储</td></tr>
+<tr><th>更新</th><td>手动下载新 APK</td><td>商店自动更新</td><td>自动</td></tr>
+</tbody>
+</table>
+</div>
+<p>要官方账号登录、官方服务和自动更新，请装官方 App。这个项目的价值是：界面来自官方的开源实现，功能完整，且完全跑在你自己的 API Key 上。</p>
+
+<h2>常见问题</h2>
+
+<details open>
+<summary>这是 DeepSeek 官方发布的 App 吗？</summary>
+<p>不是。这是第三方打包的社区项目，只复用官方开源的 chat-demo 网页界面。官方渠道只有应用商店里的 DeepSeek App 和 <code>chat.deepseek.com</code>。</p>
+</details>
+
+<details>
+<summary>用这个 App 需要付费吗？</summary>
+<p>App 本身免费开源。对话走 DeepSeek API，按官方价格从你自己的账户扣费，需要先在 <a href="https://platform.deepseek.com/api_keys">platform.deepseek.com</a> 申请 API Key 并充值。</p>
+</details>
+
+<details>
+<summary>支持哪些安卓版本？</summary>
+<p>Android 7.0（API 24）及以上，且系统 WebView 版本不低于 105。旧机型 WebView 偏低时，可以在应用商店更新「Android System WebView」。</p>
+</details>
+
+<details>
+<summary>和官方 App 比少了什么？</summary>
+<p>没有官方账号体系、没有官方 App 特有的多模态功能，不能自动更新。数据都留在本机，换机要自己导出导入。</p>
+</details>
+
+<details>
+<summary>APK 安全吗？怎么验证？</summary>
+<p>源码在 GitHub 公开，可以自行构建比对。每个 Release 都给出安装包的 SHA-256 和签名证书 SHA-256，发布后没有再改包；签名用固定的正式密钥，后续版本可覆盖安装。</p>
+</details>
+
+<details>
+<summary>安装时被 Play Protect 拦截怎么办？</summary>
+<p>手动安装、未上架商店的小体积包常被拦。确认来源是本仓库 Releases 后可以继续；若系统只给「取消」，可临时关闭 Play 保护机制校验，装完再打开。</p>
+</details>
+
+<details>
+<summary>支持 iOS 或鸿蒙吗？</summary>
+<p>不支持。仓库只有 Android 工程。iPhone 可以把网页版添加到主屏幕，鸿蒙 NEXT 不在支持范围内。</p>
+</details>
+
+<details>
+<summary>会收集或上传我的数据吗？</summary>
+<p>App 没有埋点、没有第三方统计，只有 DeepSeek API 一个网络出口。API Key 和会话存在本机 WebView 存储里，系统备份已关闭（<code>allowBackup=false</code>），卸载会清空数据。</p>
+</details>
+
+<h2>自己构建</h2>
+<p>需要 Node.js 22.12+、pnpm、JDK 21 和 Android SDK（platform 36 / build-tools 36）。</p>
+<pre style="overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px"><code>git clone --recurse-submodules https://github.com/xlicz/deepseek-chat.git
+cd deepseek-chat
+pnpm install
+export JAVA_HOME=&lt;JDK 21 路径&gt;
+export ANDROID_HOME=&lt;Android SDK 路径&gt;
+pnpm apk:debug</code></pre>
+<p class="note">产物在 <code>android/app/build/outputs/apk/debug/app-debug.apk</code>。完整说明见仓库 <a href="https://github.com/xlicz/deepseek-chat#readme">README</a>。</p>
+
+<footer>
+  <p>非官方社区项目，与 DeepSeek 公司没有隶属或合作关系。「DeepSeek」是其所有者的商标，这里只用来说明 App 接入的服务。</p>
+  <p><a href="https://github.com/xlicz/deepseek-chat">GitHub 仓库</a> · <a href="https://github.com/xlicz/deepseek-chat/releases">全部版本</a> · <a href="https://github.com/xlicz/deepseek-chat/issues">反馈问题</a> · <a href="https://github.com/xlicz/deepseek-chat/blob/main/LICENSE">MIT 许可证</a></p>
+</footer>
+
+</div>
+</body>
+</html>
