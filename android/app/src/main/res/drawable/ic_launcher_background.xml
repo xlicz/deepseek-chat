@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自适应图标背景层：左上奶油白到右下浅紫的渐变 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:angle="315"
+        android:startColor="#FFFEF9"
+        android:centerColor="#F6F0FF"
+        android:endColor="#D0C4FF"
+        android:type="linear" />
+</shape>
