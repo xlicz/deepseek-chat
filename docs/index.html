@@ -61,6 +61,7 @@ tbody tr:last-child td{border-bottom:0}
 ul,ol{padding-left:22px}
 li{margin:4px 0}
 .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:12px 0}
+.cmd{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px;margin:12px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
 .card b{display:block;margin-bottom:2px}
 .card span{font-size:14px;color:var(--muted)}
@@ -77,6 +78,15 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;back
 .facts td{font-size:15px}
 h2{margin-top:34px}
 .summary-hint{display:block;font-size:13px;color:var(--muted);margin:-4px 0 8px}
+.grid{grid-template-columns:repeat(2,1fr)}
+.cmd{font-size:12.5px;padding:12px}
+.cmp thead{display:none}
+.cmp tr{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
+.cmp tr:last-child{border-bottom:0}
+.cmp th,.cmp td{display:block;border:0;padding:0}
+.cmp th{white-space:normal;font-size:15px;margin-bottom:6px}
+.cmp td{font-size:14px;padding:2px 0 2px 7.5em;position:relative}
+.cmp td::before{content:attr(data-label);position:absolute;left:0;color:var(--muted);font-size:13px}
 }
 @media (min-width:601px){.summary-hint{display:none}}
 </style>
@@ -139,15 +149,15 @@ h2{margin-top:34px}
 <h2>和官方 App、网页版的区别</h2>
 <p class="summary-hint">左右滑动查看完整对比</p>
 <div class="scroll">
-<table>
+<table class="cmp">
 <thead><tr><th></th><th>本 App（非官方）</th><th>官方 App</th><th>浏览器网页版</th></tr></thead>
 <tbody>
-<tr><th>界面来源</th><td>官方开源项目 chat-demo</td><td>官方原生界面</td><td>官方网页</td></tr>
-<tr><th>安装方式</th><td>手动装 APK</td><td>应用商店</td><td>不需要</td></tr>
-<tr><th>桌面图标</th><td>有，独立入口</td><td>有</td><td>需「添加到主屏幕」</td></tr>
-<tr><th>登录方式</th><td>自己的 API Key，按量计费</td><td>官方账号</td><td>官方账号</td></tr>
-<tr><th>数据落地</th><td>全部在本机</td><td>官方服务端</td><td>浏览器存储</td></tr>
-<tr><th>更新</th><td>手动下载新 APK</td><td>商店自动更新</td><td>自动</td></tr>
+<tr><th>界面来源</th><td data-label="本 App（非官方）">官方开源项目 chat-demo</td><td data-label="官方 App">官方原生界面</td><td data-label="浏览器网页版">官方网页</td></tr>
+<tr><th>安装方式</th><td data-label="本 App（非官方）">手动装 APK</td><td data-label="官方 App">应用商店</td><td data-label="浏览器网页版">不需要</td></tr>
+<tr><th>桌面图标</th><td data-label="本 App（非官方）">有，独立入口</td><td data-label="官方 App">有</td><td data-label="浏览器网页版">需「添加到主屏幕」</td></tr>
+<tr><th>登录方式</th><td data-label="本 App（非官方）">自己的 API Key，按量计费</td><td data-label="官方 App">官方账号</td><td data-label="浏览器网页版">官方账号</td></tr>
+<tr><th>数据落地</th><td data-label="本 App（非官方）">全部在本机</td><td data-label="官方 App">官方服务端</td><td data-label="浏览器网页版">浏览器存储</td></tr>
+<tr><th>更新</th><td data-label="本 App（非官方）">手动下载新 APK</td><td data-label="官方 App">商店自动更新</td><td data-label="浏览器网页版">自动</td></tr>
 </tbody>
 </table>
 </div>
@@ -197,7 +207,7 @@ h2{margin-top:34px}
 
 <h2>自己构建</h2>
 <p>需要 Node.js 22.12+、pnpm、JDK 21 和 Android SDK（platform 36 / build-tools 36）。</p>
-<pre style="overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px"><code>git clone --recurse-submodules https://github.com/xlicz/deepseek-chat.git
+<pre class="cmd"><code>git clone --recurse-submodules https://github.com/xlicz/deepseek-chat.git
 cd deepseek-chat
 pnpm install
 export JAVA_HOME=&lt;JDK 21 路径&gt;
