@@ -30,6 +30,7 @@ iOS、鸿蒙、官方账号登录、自动更新、应用商店分发、几百 M
 
 ## 链接
 
+- [项目主页](https://xlicz.github.io/deepseek-chat/)：面向普通用户的介绍页、安装步骤与常见问题
 - [仓库](https://github.com/xlicz/deepseek-chat)：源码与文档
 - [最新 Release](https://github.com/xlicz/deepseek-chat/releases/latest)：APK 下载与校验值
 - [README](https://github.com/xlicz/deepseek-chat/blob/main/README.md)：完整说明、FAQ、构建方法
