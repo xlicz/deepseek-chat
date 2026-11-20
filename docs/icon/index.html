@@ -1,0 +1,68 @@
+<!doctype html><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>图标方案 · DeepSeek Chat for Android</title><style>
+body{margin:0;-webkit-text-size-adjust:100%;background:#07080c;color:#e9ecf5;font:14px/1.6 -apple-system,"PingFang SC",sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:20px;margin:0 0 6px}
+p.sub{color:#98a1b4;font-size:13px;margin:0 0 26px}
+.row{display:flex;gap:26px;flex-wrap:wrap;margin:22px 0 0}
+.cell{display:flex;flex-direction:column;align-items:center;gap:8px}
+.t{color:#98a1b4;font-size:12px}
+.big{width:190px}.m{width:96px}.s{width:56px}.xs{width:36px}
+svg{display:block;border-radius:23%}
+.home{display:flex;gap:20px;align-items:flex-end;padding:26px 22px;border-radius:22px;background:linear-gradient(160deg,#243056,#0e1224 60%,#1b2140);margin-top:34px}
+.app{display:flex;flex-direction:column;align-items:center;gap:7px;width:64px}
+.app span{font-size:10.5px;color:#cdd4e6;white-space:nowrap}
+.ghost{border-radius:16px;width:56px;height:56px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.09)}
+.mono{width:120px;border-radius:26%;background:#2a2f45;padding:0;display:grid;place-items:center}
+.mono svg{width:76px;height:76px;border-radius:0}
+h2{font-size:15px;margin:34px 0 4px;color:#cfd6e8}
+</style>
+<div class="wrap">
+<h1>图标方案 · DeepSeek Chat for Android</h1>
+<p class="sub">同一套渐变底，三种表情。看小尺寸是否还认得出。</p>
+<div class="row" id="big"></div>
+
+<h2>真实尺寸</h2>
+<div class="row" id="sizes"></div>
+
+<h2>桌面上的样子</h2>
+<div class="home" id="home"></div>
+
+<h2>主题图标（单色）</h2>
+<div class="row" id="mono"></div>
+</div>
+<script>
+const defs=(id)=>`<defs>
+<linearGradient id="bg${id}" x1=".1" y1="0" x2=".75" y2="1"><stop offset="0" stop-color="#6F7DF2"/><stop offset=".55" stop-color="#4E57D8"/><stop offset="1" stop-color="#2B30A2"/></linearGradient>
+<radialGradient id="hl${id}" cx=".3" cy=".1" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".3"/><stop offset=".45" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<linearGradient id="ink${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FBF0E2"/></linearGradient>
+</defs>`;
+const tile=(id)=>`<rect width="512" height="512" rx="118" fill="url(#bg${id})"/><rect width="512" height="512" rx="118" fill="url(#hl${id})"/><rect x="1.5" y="1.5" width="509" height="509" rx="116.5" fill="none" stroke="#fff" stroke-opacity=".13" stroke-width="3"/>`;
+const BUBBLE=`M196,148 H316 C364,148 400,184 400,232 V258 C400,306 364,342 316,342 H262 C246,342 236,352 214,378 C206,388 196,384 198,370 L202,342 H196 C148,342 112,306 112,258 V232 C112,184 148,148 196,148 Z`;
+const eyes=`<path d="M188,258 Q206,234 224,258" fill="none" stroke="#2C3199" stroke-width="16" stroke-linecap="round"/><path d="M288,258 Q306,234 324,258" fill="none" stroke="#2C3199" stroke-width="16" stroke-linecap="round"/>`;
+const calm=`<ellipse cx="206" cy="252" rx="15" ry="19" fill="#2C3199"/><ellipse cx="306" cy="252" rx="15" ry="19" fill="#2C3199"/>`;
+const smiley=`<ellipse cx="206" cy="248" rx="15" ry="18" fill="#2C3199"/><ellipse cx="306" cy="248" rx="15" ry="18" fill="#2C3199"/><path d="M232,292 Q256,310 280,292" fill="none" stroke="#2C3199" stroke-width="13" stroke-linecap="round"/>`;
+const bubble=(id,face)=>`<svg viewBox="0 0 512 512">${defs(id)}${tile(id)}<path fill="url(#ink${id})" d="${BUBBLE}"/>${face}</svg>`;
+const pearl=(id)=>`<svg viewBox="0 0 512 512">${defs(id)}${tile(id)}
+<defs><radialGradient id="p${id}" cx=".35" cy=".26" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#F6F3FF"/><stop offset="1" stop-color="#D3CEEF"/></radialGradient></defs>
+<circle cx="256" cy="256" r="126" fill="url(#p${id})"/>
+<path d="M182,250 Q200,228 218,250" fill="none" stroke="#2C3199" stroke-width="16" stroke-linecap="round"/>
+<path d="M294,250 Q312,228 330,250" fill="none" stroke="#2C3199" stroke-width="16" stroke-linecap="round"/>
+</svg>`;
+const opts=[['A 笑眼气泡',bubble('a',eyes),true],['B 安静双眼',bubble('b',calm),false],['C 圆脸',pearl('c'),false]];
+document.getElementById('big').innerHTML=opts.map(([n,s,r])=>`<div class="cell"><div class="big">${s}</div><span class="t">${n}${r?' · 推荐':''}</span></div>`).join('');
+let html='';
+for(const [n,s] of opts){ html+=`<div class="cell"><div style="display:flex;gap:16px;align-items:flex-end"><div class="m">${s}</div><div class="s">${s}</div><div class="xs">${s}</div></div><span class="t">${n}</span></div>` }
+document.getElementById('sizes').innerHTML=html;
+document.getElementById('home').innerHTML=`
+${['A',0].slice(0,1).map(()=>'')}
+<div class="app">${opts[0][1].replace('width="512"','width="56"')}<span>DeepSeek Chat</span></div>
+<div class="app"><div class="ghost"></div><span>相机</span></div>
+<div class="app"><div class="ghost"></div><span>相册</span></div>
+<div class="app"><div class="ghost"></div><span>设置</span></div>
+<div class="app">${opts[2][1]}<span>圆脸</span></div>`;
+document.getElementById('mono').innerHTML=`<div class="mono"><svg viewBox="0 0 512 512"><path fill="#fff" fill-rule="evenodd" d="${BUBBLE} M190,258 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0 Z M286,258 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0 Z"/></svg></div>
+<span class="t">单色版：只留轮廓和两只眼睛，系统按壁纸取色</span>`;
+</script>
