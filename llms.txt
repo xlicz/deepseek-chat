@@ -12,7 +12,7 @@
 - 最新版本：v0.1.2（2026-11-21）
 - 安装包：deepseek-chat-0.1.2.apk，约 5.7 MB，SHA-256 ea4afd4b6a457e9d6d47a4b21675224ee8c04ba0bd6c1db881e88ff83f8b46f6
 - 系统要求：Android 7.0（API 24）及以上，系统 WebView 105 及以上
-- 上游：github.com/deepseek-ai/chat-demo v0.1.2（git 子模块，源码未修改）
+- 上游：github.com/deepseek-ai/chat-demo v0.1.1（git 子模块，源码未修改）
 - 技术栈：Capacitor 8、Android WebView、Java、Gradle
 - 网络：唯一出口 https://api.deepseek.com，无中转、无自建服务端
 - 本地存储：WebView localStorage（设置、API Key）、IndexedDB（会话、附件）；allowBackup=false
