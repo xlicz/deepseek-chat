@@ -2,11 +2,12 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>DeepSeek Chat for Android — 非官方安卓客户端 APK 下载</title>
 <meta name="description" content="把 DeepSeek 官方开源的网页版 chat-demo 打包成安卓 APK 的非官方客户端。免费开源，直连 DeepSeek API，无中转，支持语音、附件、深度思考。Android 7.0+。">
 <meta name="keywords" content="DeepSeek, DeepSeek 安卓客户端, DeepSeek APK, 非官方客户端, chat-demo, Android, Capacitor, WebView">
 <meta name="author" content="xlicz">
+<meta name="theme-color" content="#07080c">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="canonical" href="https://xlicz.github.io/deepseek-chat/">
 <meta property="og:type" content="website">
@@ -14,22 +15,21 @@
 <meta property="og:title" content="DeepSeek Chat for Android — 非官方安卓客户端">
 <meta property="og:description" content="把 DeepSeek 官方开源的网页版 chat-demo 打包成安卓 APK。免费开源，直连 API，无中转。">
 <meta property="og:url" content="https://xlicz.github.io/deepseek-chat/">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xlicz.github.io/deepseek-chat/social-preview.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DeepSeek Chat for Android，非官方安卓客户端">
-<meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DeepSeek Chat for Android — 非官方安卓客户端">
 <meta name="twitter:description" content="把 DeepSeek 官方开源的网页版 chat-demo 打包成安卓 APK。免费开源，直连 API，无中转。">
 <meta name="twitter:image" content="https://xlicz.github.io/deepseek-chat/social-preview.png">
 <meta name="twitter:image:alt" content="DeepSeek Chat for Android，非官方安卓客户端">
-<meta name="theme-color" content="#3B5BDB">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='24' fill='%233B5BDB'/%3E%3Cpath fill='%23fff' d='M40 34h28a10 10 0 0 1 10 10v14a10 10 0 0 1-10 10H52L38 80l3-12h-1a10 10 0 0 1-10-10V44a10 10 0 0 1 10-10z'/%3E%3C/svg%3E">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"SoftwareApplication","@id":"https://xlicz.github.io/deepseek-chat/#app","name":"DeepSeek Chat for Android","alternateName":"DeepSeek 安卓客户端（非官方）","description":"非官方的 DeepSeek 安卓客户端：把 DeepSeek 官方开源的网页版界面 chat-demo 打包成 APK，用系统 WebView 运行，直接调用 DeepSeek API，没有自建后端或中转服务器。","applicationCategory":"UtilitiesApplication","applicationSubCategory":"AI 对话客户端","operatingSystem":"Android 7.0+","softwareVersion":"0.1.0","fileSize":"4.9MB","isAccessibleForFree":true,"downloadUrl":"https://github.com/xlicz/deepseek-chat/releases/latest","codeRepository":"https://github.com/xlicz/deepseek-chat","license":"https://opensource.org/licenses/MIT","programmingLanguage":["Java","JavaScript"],"inLanguage":["zh-CN","en"],"author":{"@type":"Person","name":"xlicz","url":"https://github.com/xlicz"},"offers":{"@type":"Offer","price":"0","priceCurrency":"CNY","availability":"https://schema.org/InStock"},"isBasedOn":"https://github.com/deepseek-ai/chat-demo","image":"https://xlicz.github.io/deepseek-chat/social-preview.png","screenshot":"https://xlicz.github.io/deepseek-chat/social-preview.png"},
+{"@type":"SoftwareApplication","@id":"https://xlicz.github.io/deepseek-chat/#app","name":"DeepSeek Chat for Android","alternateName":"DeepSeek 安卓客户端（非官方）","description":"非官方的 DeepSeek 安卓客户端：把 DeepSeek 官方开源的网页版界面 chat-demo 打包成 APK，用系统 WebView 运行，直接调用 DeepSeek API，没有自建后端或中转服务器。","applicationCategory":"UtilitiesApplication","applicationSubCategory":"AI 对话客户端","operatingSystem":"Android 7.0+","softwareVersion":"0.1.0","fileSize":"4.9MB","isAccessibleForFree":true,"downloadUrl":"https://github.com/xlicz/deepseek-chat/releases/latest","codeRepository":"https://github.com/xlicz/deepseek-chat","license":"https://opensource.org/licenses/MIT","programmingLanguage":["Java","JavaScript"],"inLanguage":["zh-CN","en"],"author":{"@type":"Person","name":"xlicz","url":"https://github.com/xlicz"},"offers":{"@type":"Offer","price":"0","priceCurrency":"CNY","availability":"https://schema.org/InStock"},"isBasedOn":"https://github.com/deepseek-ai/chat-demo","image":"https://xlicz.github.io/deepseek-chat/social-preview.png","screenshot":"https://xlicz.github.io/deepseek-chat/app-dark.png"},
 {"@type":"FAQPage","@id":"https://xlicz.github.io/deepseek-chat/#faq","mainEntity":[
 {"@type":"Question","name":"这是 DeepSeek 官方发布的 App 吗？","acceptedAnswer":{"@type":"Answer","text":"不是。这是第三方打包的社区项目，只复用官方开源的 chat-demo 网页界面。官方渠道只有应用商店里的 DeepSeek App 和 chat.deepseek.com。"}},
 {"@type":"Question","name":"用这个 App 需要付费吗？","acceptedAnswer":{"@type":"Answer","text":"App 本身免费开源。对话走 DeepSeek API，按官方价格从你自己的账户扣费，需要先在 platform.deepseek.com 申请 API Key 并充值。"}},
@@ -41,193 +41,425 @@
 ]}
 </script>
 <style>
-:root{--bg:#fff;--fg:#16181d;--muted:#5b6270;--line:#e4e7ec;--brand:#3B5BDB;--card:#f7f8fa}
-@media (prefers-color-scheme:dark){:root{--bg:#12141a;--fg:#e9ebf0;--muted:#9aa1ae;--line:#272b34;--brand:#7a92f0;--card:#191c23}}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
-.wrap{max-width:820px;margin:0 auto;padding:0 20px}
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-header{padding:56px 0 32px;border-bottom:1px solid var(--line)}
-h1{font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0 0 12px;letter-spacing:-.02em}
-.lead{font-size:17px;color:var(--muted);margin:0 0 24px;max-width:44em}
-.tag{display:inline-block;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin-bottom:16px}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 8px}
-.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;border:1px solid transparent}
-.btn.primary{background:var(--brand);color:#fff}
-.btn.primary:hover{text-decoration:none;filter:brightness(1.06)}
-.btn.ghost{border-color:var(--line);color:var(--fg)}
-.note{font-size:14px;color:var(--muted)}
-h2{font-size:21px;margin:44px 0 14px;letter-spacing:-.01em}
-h3{font-size:16px;margin:24px 0 6px}
-table{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0}
-th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-th{color:var(--muted);font-weight:600;white-space:nowrap}
-tbody tr:last-child td{border-bottom:0}
-.scroll{overflow-x:auto}
-ul,ol{padding-left:22px}
-li{margin:4px 0}
-.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:12px 0}
-.cmd{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px;margin:12px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.card b{display:block;margin-bottom:2px}
-.card span{font-size:14px;color:var(--muted)}
-details{border-bottom:1px solid var(--line);padding:14px 0}
-summary{cursor:pointer;font-weight:600}
-details p{margin:8px 0 0;color:var(--muted)}
-footer{margin:56px 0 0;padding:24px 0 56px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
-@media (max-width:600px){
-.facts tr{display:block;padding:10px 0;border-bottom:1px solid var(--line)}
-.facts tr:last-child{border-bottom:0}
-.facts th,.facts td{display:block;border:0;padding:0}
-.facts th{white-space:normal;font-size:13px;margin-bottom:2px}
-.facts td{font-size:15px}
-h2{margin-top:34px}
-.summary-hint{display:block;font-size:13px;color:var(--muted);margin:-4px 0 8px}
-.grid{grid-template-columns:repeat(2,1fr)}
-.cmd{font-size:12.5px;padding:12px}
-.cmp thead{display:none}
-.cmp tr{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
-.cmp tr:last-child{border-bottom:0}
-.cmp th,.cmp td{display:block;border:0;padding:0}
-.cmp th{white-space:normal;font-size:15px;margin-bottom:6px}
-.cmp td{font-size:14px;padding:2px 0 2px 7.5em;position:relative}
-.cmp td::before{content:attr(data-label);position:absolute;left:0;color:var(--muted);font-size:13px}
+:root{
+  color-scheme:dark;
+  --bg:#07080c;
+  --bg-soft:#0b0d14;
+  --fg:#eef1f7;
+  --muted:#98a1b4;
+  --line:rgba(255,255,255,.09);
+  --line-strong:rgba(255,255,255,.16);
+  --card:rgba(255,255,255,.032);
+  --brand:#5b74f0;
+  --brand-2:#9a8bf7;
+  --brand-3:#3ad2c6;
+  --radius:20px;
 }
-@media (min-width:601px){.summary-hint{display:none}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3{letter-spacing:-.025em;margin:0}
+p{margin:0}
+::selection{background:rgba(91,116,240,.35)}
+
+/* ---------- 背景层 ---------- */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.grid{
+  position:absolute;inset:-2px;
+  background-image:linear-gradient(to right,rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 20%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 20%,transparent 75%);
+}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+.orb.a{width:620px;height:620px;left:50%;top:-320px;margin-left:-430px;background:radial-gradient(circle,#3b5bdb,transparent 66%);animation:drift 26s ease-in-out infinite}
+.orb.b{width:520px;height:520px;right:-160px;top:120px;background:radial-gradient(circle,#7b4bf0,transparent 68%);opacity:.4;animation:drift 32s ease-in-out infinite reverse}
+.orb.c{width:420px;height:420px;left:-160px;top:520px;background:radial-gradient(circle,#1f9d95,transparent 70%);opacity:.26;animation:drift 38s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(40px,60px,0) scale(1.12)}}
+.grain{position:absolute;inset:0;opacity:.16;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+
+/* ---------- 布局 ---------- */
+.wrap{position:relative;z-index:1}
+.container{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+section{position:relative}
+section[id]{scroll-margin-top:86px}
+
+/* ---------- 导航 ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(7,8,12,.72);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;gap:28px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:650;letter-spacing:-.01em}
+.logo svg{width:26px;height:26px;border-radius:8px;flex:none}
+.nav-links{display:flex;gap:26px;margin-left:auto;font-size:14.5px;color:var(--muted)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--fg)}
+.nav-cta{font-size:14px;padding:8px 16px;border-radius:999px;border:1px solid var(--line-strong);background:rgba(255,255,255,.04);transition:background .2s,transform .2s}
+.nav-cta:hover{background:rgba(255,255,255,.1);transform:translateY(-1px)}
+@media(max-width:820px){.nav-links{display:none}.nav-cta{margin-left:auto}}
+
+/* ---------- 英雄区 ---------- */
+.hero{padding:150px 0 84px;text-align:center;overflow:hidden}
+.badge{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--muted);border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:999px;padding:6px 15px;backdrop-filter:blur(8px)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--brand-3);box-shadow:0 0 10px var(--brand-3)}
+.hero h1{font-size:clamp(38px,6.4vw,74px);line-height:1.08;font-weight:700;margin:26px 0 0}
+.grad{background:linear-gradient(100deg,#8ea4ff 0%,#b79dff 45%,#63e2d2 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{max-width:640px;margin:22px auto 0;color:var(--muted);font-size:clamp(15px,1.7vw,17.5px);line-height:1.75}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:32px 0 0}
+.btn{display:inline-flex;align-items:center;gap:9px;height:50px;padding:0 26px;border-radius:14px;font-weight:600;font-size:15.5px;transition:transform .2s,box-shadow .3s,background .2s;border:1px solid transparent}
+.btn.primary{background:linear-gradient(180deg,#6d84f5,#4a5fe0);color:#fff;box-shadow:0 8px 30px -8px rgba(91,116,240,.85),inset 0 1px 0 rgba(255,255,255,.28)}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px -10px rgba(91,116,240,.95),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn.ghost{border-color:var(--line-strong);background:rgba(255,255,255,.04);color:var(--fg)}
+.btn.ghost:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+.meta{margin-top:18px;font-size:13.5px;color:var(--muted)}
+.meta b{color:var(--fg);font-weight:600}
+.meta span{opacity:.45;margin:0 9px}
+
+/* ---------- 手机 ---------- */
+.stage{position:relative;margin:56px auto 0;max-width:760px;display:flex;justify-content:center;align-items:flex-end;height:520px}
+.stage::before{content:"";position:absolute;left:50%;top:44%;width:820px;height:520px;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(91,116,240,.45),rgba(154,139,247,.16) 42%,transparent 68%);filter:blur(28px);pointer-events:none}
+.phone{position:relative;border-radius:42px;padding:9px;background:linear-gradient(160deg,#252a3a,#0d1017 42%,#1b2030);border:1px solid rgba(255,255,255,.16);box-shadow:0 40px 80px -30px rgba(0,0,0,.95),0 0 0 1px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.14)}
+.phone .screen{border-radius:34px;overflow:hidden;background:#0b0d12;position:relative}
+.phone img{width:100%;height:auto}
+.phone.back{width:252px;transform:translate(54px,34px) rotate(-10deg);z-index:1;opacity:.92;filter:brightness(.94)}
+.phone.front{width:286px;z-index:2;transform:translate(-6px,0);box-shadow:0 50px 90px -28px rgba(0,0,0,.95),0 0 60px -12px rgba(91,116,240,.5),0 0 0 1px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.18)}
+.phone.front .screen::after{content:"";position:absolute;left:50%;top:9px;width:74px;height:20px;transform:translateX(-50%);background:#0b0d12;border-radius:0 0 12px 12px;z-index:3}
+.chip{position:absolute;z-index:3;font-size:12.5px;letter-spacing:.01em;padding:8px 14px;border-radius:999px;background:rgba(14,17,26,.82);border:1px solid var(--line-strong);backdrop-filter:blur(14px);box-shadow:0 12px 30px -12px rgba(0,0,0,.9);color:#cfd6e6;white-space:nowrap}
+.chip.l{left:0;top:64px;animation:float 7s ease-in-out infinite}
+.chip.r{right:0;top:150px;animation:float 9s ease-in-out infinite reverse}
+.chip.b{left:0;bottom:52px;animation:float 8s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.chip.l,.chip.r{will-change:transform}
+@media(max-width:760px){
+  .hero{padding:120px 0 40px}
+  .stage{height:auto;margin-top:38px;min-height:0}
+  .stage::before{width:420px;height:420px;top:38%}
+  .phone.front{width:238px;border-radius:34px;padding:7px;transform:none}
+  .phone.front .screen{border-radius:28px}
+  .phone.front .screen::after{width:62px;height:17px;top:7px}
+  .phone.back{display:none}
+  .chip{font-size:11.5px;padding:6px 11px}
+  .chip.l{top:-6px;left:0}
+  .chip.r,.chip.b{display:none}
+}
+
+/* ---------- 数据条 ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:34px}
+.stat{background:var(--bg);padding:26px 18px;text-align:center}
+.stat b{display:block;font-size:26px;letter-spacing:-.02em;background:linear-gradient(180deg,#fff,#a9b4cf);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:13px;color:var(--muted)}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.stat{padding:20px 10px}.stat b{font-size:22px}}
+
+/* ---------- 通用区块头 ---------- */
+.sec{padding:88px 0}
+.hint{margin-top:22px;font-size:13.5px;color:var(--muted);line-height:1.7}
+.hint .sep{opacity:.4;margin:0 10px}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#7f8cab;font-weight:600}
+.sec h2{font-size:clamp(26px,3.6vw,40px);line-height:1.2;margin:12px 0 0;font-weight:680}
+.sec .sub{color:var(--muted);margin-top:14px;max-width:620px;font-size:16px}
+.center{text-align:center}
+.center .sub{margin-left:auto;margin-right:auto}
+
+/* ---------- Bento 功能卡 ---------- */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:44px}
+.card{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:border-color .3s,transform .3s,background .3s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(340px circle at var(--mx,50%) var(--my,0%),rgba(120,140,255,.16),transparent 62%);opacity:0;transition:opacity .35s}
+.card:hover{border-color:rgba(255,255,255,.2);transform:translateY(-3px);background:rgba(255,255,255,.05)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card .ico{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(160deg,rgba(120,140,255,.22),rgba(120,140,255,.06));border:1px solid rgba(140,160,255,.28);margin-bottom:16px}
+.card .ico svg{width:19px;height:19px;stroke:#a9b8ff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:16.5px;font-weight:640}
+.card p{color:var(--muted);font-size:14.2px;line-height:1.6;margin-top:7px}
+.w3{grid-column:span 3}
+.w2{grid-column:span 2}
+@media(max-width:820px){.bento{grid-template-columns:repeat(2,1fr)}.w3,.w2{grid-column:span 1}}
+@media(max-width:640px){.bento{grid-template-columns:1fr}.sec{padding:64px 0}.card{padding:22px}.cta{padding:46px 22px}}
+
+/* ---------- 对比表 ---------- */
+.compare{margin-top:40px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:rgba(255,255,255,.02)}
+table{width:100%;border-collapse:collapse;font-size:14.6px}
+th,td{text-align:left;padding:15px 20px;border-bottom:1px solid var(--line)}
+thead th{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#8b95ad;font-weight:600;background:rgba(255,255,255,.025)}
+thead th.hi{color:#b9c6ff;text-transform:none;letter-spacing:.02em;font-size:13px}
+tbody th{color:var(--muted);font-weight:500;width:22%}
+tbody td{color:#dbe1ee}
+tbody td.hi{color:#fff;background:rgba(91,116,240,.09);font-weight:520}
+tr:last-child th,tr:last-child td{border-bottom:0}
+.scrollhint{display:none}
+@media(max-width:700px){
+  .compare{border:0;background:none;margin-top:28px}
+  .scrollhint{display:block;font-size:13px;color:var(--muted);margin-bottom:10px}
+  table{font-size:14px}
+  thead th{padding:10px 12px;font-size:11.5px}
+  tbody th{width:auto}
+  th,td{padding:10px 12px}
+  tbody td.hi{background:rgba(91,116,240,.09)}
+  .compare{overflow-x:auto;border:1px solid var(--line);border-radius:16px}
+  table{min-width:500px}
+  tbody th{white-space:nowrap}
+}
+
+/* ---------- 安装步骤 ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;counter-reset:s}
+.step{position:relative;padding:26px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+.step::before{counter-increment:s;content:"0" counter(s);font-size:13px;font-weight:700;letter-spacing:.1em;color:#8ea4ff}
+.step h3{margin-top:12px;font-size:16.5px}
+.step p{margin-top:7px;color:var(--muted);font-size:14.2px;line-height:1.6}
+.step code,.inline-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:#dbe2f7}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq{margin-top:34px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:20px 44px 20px 0;position:relative;font-weight:600;font-size:16px;transition:color .2s}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:11px;height:11px;border-right:1.8px solid var(--muted);border-bottom:1.8px solid var(--muted);transform:translateY(-70%) rotate(45deg);transition:transform .3s,border-color .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg);border-color:#8ea4ff}
+summary:hover{color:#bcc8ee}
+details p{padding:0 40px 22px 0;color:var(--muted);font-size:15px;line-height:1.75}
+
+/* ---------- 结尾 CTA ---------- */
+.cta{position:relative;overflow:hidden;margin:24px 0 0;padding:58px 32px;border-radius:26px;border:1px solid var(--line-strong);text-align:center;background:radial-gradient(ellipse 90% 120% at 50% 0%,rgba(91,116,240,.30),rgba(11,13,20,.6) 60%),linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
+.cta h2{font-size:clamp(24px,3.4vw,36px)}
+.cta p{color:var(--muted);margin-top:14px}
+.cta .actions{margin-top:26px}
+
+/* ---------- 页脚 ---------- */
+footer{border-top:1px solid var(--line);margin-top:80px;padding:44px 0 60px;color:var(--muted);font-size:13.5px}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.foot a:hover{color:var(--fg)}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap}
+.disclaimer{max-width:640px;margin-top:18px;line-height:1.7;opacity:.85}
+
+/* ---------- 入场动画 ---------- */
+.rise{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.rise.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rise{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<header>
-  <span class="tag">非官方项目 · 开源 · MIT</span>
-  <h1>DeepSeek Chat for Android</h1>
-  <p class="lead">把 DeepSeek 官方开源的网页版界面 <a href="https://github.com/deepseek-ai/chat-demo">chat-demo</a> 打包成安卓 APK。界面是官方的开源实现，功能完整，直接调用 DeepSeek API —— 没有自建后端，没有中转服务器。</p>
-  <div class="cta">
-    <a class="btn primary" href="https://github.com/xlicz/deepseek-chat/releases/latest">下载 APK</a>
-    <a class="btn ghost" href="https://github.com/xlicz/deepseek-chat">查看源码</a>
+<div class="bg" aria-hidden="true">
+  <div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
+  <div class="grid"></div><div class="grain"></div>
+</div>
+
+<nav class="nav" id="nav">
+  <div class="container nav-in">
+    <a class="logo" href="#top">
+      <svg viewBox="0 0 108 108" aria-hidden="true"><rect width="108" height="108" rx="26" fill="#3B5BDB"/><path fill="#fff" d="M40 34h28a10 10 0 0 1 10 10v14a10 10 0 0 1-10 10H52L38 80l3-12h-1a10 10 0 0 1-10-10V44a10 10 0 0 1 10-10z"/></svg>
+      DeepSeek Chat
+    </a>
+    <div class="nav-links">
+      <a href="#features">功能</a>
+      <a href="#compare">对比</a>
+      <a href="#install">安装</a>
+      <a href="#faq">常见问题</a>
+      <a href="https://github.com/xlicz/deepseek-chat">GitHub</a>
+    </div>
+    <a class="nav-cta" href="https://github.com/xlicz/deepseek-chat/releases/latest">下载 APK</a>
   </div>
-  <p class="note">最新版本 v0.1.0 · 约 4.9 MB · Android 7.0+ · 需要自备 DeepSeek API Key</p>
+</nav>
+
+<div class="wrap" id="top">
+
+<header class="hero">
+  <div class="container">
+    <div class="rise"><span class="badge"><i class="dot"></i>非官方 · 开源 · MIT</span></div>
+    <h1 class="rise">把 DeepSeek 网页版<br><span class="grad">装进安卓桌面</span></h1>
+    <p class="lead rise">界面是官方开源的 chat-demo，外壳是一个轻量安卓工程。直连 <span class="inline-code">api.deepseek.com</span>，没有中转服务器，没有埋点统计。</p>
+    <div class="actions rise">
+      <a class="btn primary" href="https://github.com/xlicz/deepseek-chat/releases/latest">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+        下载 APK
+      </a>
+      <a class="btn ghost" href="https://github.com/xlicz/deepseek-chat">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+        查看源码
+      </a>
+    </div>
+    <p class="meta rise"><b>v0.1.0</b><span>·</span>4.9 MB<span>·</span>Android 7.0+<span>·</span>需要自备 API Key</p>
+
+    <div class="stage rise">
+      <div class="phone back" aria-hidden="true"><div class="screen"><img src="app-light.png" alt="浅色主题下的 DeepSeek Chat 安卓客户端" width="1080" height="1754" loading="lazy" decoding="async"></div></div>
+      <div class="phone front"><div class="screen"><img src="app-dark.png" alt="深色主题下 DeepSeek Chat 安卓客户端的对话界面" width="1080" height="1754" decoding="async"></div></div>
+      <span class="chip l">直连 api.deepseek.com</span>
+      <span class="chip r">无中转 · 无埋点</span>
+      <span class="chip b">深浅主题自动跟随系统</span>
+    </div>
+  </div>
 </header>
 
-<h2>它解决什么问题</h2>
-<p>官方网页版功能齐全，但在手机上要用浏览器打开，或者「添加到主屏幕」。这个 App 把它做成真正的应用：桌面有独立图标，返回键按层级返回，导出的文件和附件能用系统对话框保存与打开。适合想用一个独立入口、又希望数据完全留在本机的安卓用户。</p>
+<section class="stats">
+  <div class="stat rise"><b>4.9 MB</b><span>安装包体积</span></div>
+  <div class="stat rise"><b>0</b><span>第三方 SDK / 埋点</span></div>
+  <div class="stat rise"><b>1</b><span>网络出口</span></div>
+  <div class="stat rise"><b>MIT</b><span>开源许可</span></div>
+</section>
 
-<h2>关键事实</h2>
-<div class="scroll">
-<table class="facts">
-<tbody>
-<tr><th>应用名</th><td>DeepSeek Chat</td></tr>
-<tr><th>包名</th><td><code>com.deepseekchat.android</code></td></tr>
-<tr><th>系统要求</th><td>Android 7.0（API 24）及以上，系统 WebView 105 及以上</td></tr>
-<tr><th>安装包</th><td><code>deepseek-chat-0.1.0.apk</code>，约 4.9 MB，正式密钥签名</td></tr>
-<tr><th>上游依据</th><td>chat-demo v0.1.1（git 子模块，源码未修改）</td></tr>
-<tr><th>技术栈</th><td>Capacitor 8 + Android WebView + Java + Gradle</td></tr>
-<tr><th>网络出口</th><td>仅 <code>https://api.deepseek.com</code>，无中转、无自建服务器</td></tr>
-<tr><th>本地数据</th><td>WebView localStorage（设置、API Key）与 IndexedDB（会话、附件）</td></tr>
-<tr><th>费用</th><td>App 免费开源；对话按 DeepSeek 官方 API 价格计费</td></tr>
-<tr><th>分发</th><td>未上架应用商店，只能从 GitHub Releases 手动安装</td></tr>
-</tbody>
-</table>
-</div>
+<section class="sec" id="features">
+  <div class="container">
+    <p class="eyebrow rise">Features</p>
+    <h2 class="rise">网页版能干的事，一件没少</h2>
+    <p class="sub rise">多会话、流式回答、深度思考、联网搜索、附件、语音输入与朗读、Markdown 与公式渲染。外壳只补上 WebView 缺的那部分。</p>
 
-<h2>功能</h2>
-<div class="grid">
-  <div class="card"><b>多会话与历史</b><span>会话列表、重命名、导入导出</span></div>
-  <div class="card"><b>流式回答</b><span>逐字输出，可随时中断</span></div>
-  <div class="card"><b>深度思考</b><span>切换推理模式，查看思考过程</span></div>
-  <div class="card"><b>联网搜索</b><span>回答带引用来源</span></div>
-  <div class="card"><b>附件上传</b><span>图片与文档，原件可再打开</span></div>
-  <div class="card"><b>语音输入与朗读</b><span>调用系统语音能力</span></div>
-  <div class="card"><b>富文本渲染</b><span>Markdown、代码高亮、公式、Mermaid</span></div>
-  <div class="card"><b>深浅主题</b><span>状态栏与导航栏颜色跟随</span></div>
-</div>
+    <div class="bento">
+      <div class="card w3 rise">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12.5h5"/></svg></div>
+        <h3>官方开源界面，功能完整</h3>
+        <p>界面来自 deepseek-ai/chat-demo，与网页版同一套实现：多会话、流式输出、深度思考、联网搜索、附件上传、语音输入与朗读、代码高亮、公式与 Mermaid 渲染，中英文界面齐备。</p>
+      </div>
+      <div class="card w3 rise">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M14 3v5h5"/><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M9 13h6M9 17h4"/></svg></div>
+        <h3>导出的文件，真的能存下来</h3>
+        <p>浏览器里 blob 下载在 WebView 里会静默失败。外壳接住了这条路径：导出历史弹出系统「保存到」对话框，附件原件交给系统中能打开它的应用。</p>
+      </div>
+      <div class="card w2 rise">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg></div>
+        <h3>返回键分层返回</h3>
+        <p>先关弹窗，再关侧边栏，最后退到后台而不是结束会话。</p>
+      </div>
+      <div class="card w2 rise">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>主题跟着系统走</h3>
+        <p>深色模式下状态栏、导航栏的颜色与图标一起切换，不留白边。</p>
+      </div>
+      <div class="card w2 rise">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
+        <h3>全面屏与刘海适配</h3>
+        <p>内容延伸到状态栏和手势条下方，边到边显示。</p>
+      </div>
+      <div class="card w3 rise">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg></div>
+        <h3>源码可查，可自行构建</h3>
+        <p>一句 <span class="inline-code">pnpm apk:debug</span> 就能出包。上游 chat-demo 以子模块锁定版本，源码一行未改。</p>
+      </div>
+      <div class="card w3 rise">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 5 3.4 8.2 8 9 4.6-.8 8-4 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>数据不出本机</h3>
+        <p>API Key 与设置存在 WebView localStorage，会话与附件存在 IndexedDB。系统备份已关闭，卸载即清空。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>安装</h2>
-<ol>
-  <li>打开 <a href="https://github.com/xlicz/deepseek-chat/releases/latest">Releases</a>，下载最新版 <code>deepseek-chat-&lt;版本&gt;.apk</code>。</li>
-  <li>在手机上点开文件。提示「未知来源」或「不允许安装未知应用」时，允许当前浏览器或文件管理器安装。</li>
-  <li>打开 App，在设置里填入 <a href="https://platform.deepseek.com/api_keys">DeepSeek API Key</a>，开始对话。</li>
-</ol>
-<p class="note">安装包没有上架任何应用商店。下载后建议核对 SHA-256，每个 Release 的正文里都写了对应值。</p>
+<section class="sec" id="compare">
+  <div class="container">
+    <p class="eyebrow rise">Compare</p>
+    <h2 class="rise">和官方 App、网页版差在哪</h2>
+    <p class="sub rise">要官方账号登录、官方服务和自动更新，请装官方 App。这个项目的价值是界面来自官方开源实现，且完全跑在你自己的 Key 上。</p>
+    <p class="scrollhint">左右滑动查看完整对比</p>
+    <div class="compare rise">
+      <table>
+        <thead><tr><th></th><th class="hi">本 App（非官方）</th><th>官方 App</th><th>浏览器网页版</th></tr></thead>
+        <tbody>
+          <tr><th>界面来源</th><td class="hi">官方开源项目 chat-demo</td><td>官方原生界面</td><td>官方网页</td></tr>
+          <tr><th>安装方式</th><td class="hi">手动装 APK</td><td>应用商店</td><td>不需要</td></tr>
+          <tr><th>桌面图标</th><td class="hi">有，独立入口</td><td>有</td><td>需「添加到主屏幕」</td></tr>
+          <tr><th>登录方式</th><td class="hi">自己的 API Key，按量计费</td><td>官方账号</td><td>官方账号</td></tr>
+          <tr><th>数据落地</th><td class="hi">全部在本机</td><td>官方服务端</td><td>浏览器存储</td></tr>
+          <tr><th>更新</th><td class="hi">手动下载新 APK</td><td>商店自动更新</td><td>自动</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
-<h2>和官方 App、网页版的区别</h2>
-<p class="summary-hint">左右滑动查看完整对比</p>
-<div class="scroll">
-<table class="cmp">
-<thead><tr><th></th><th>本 App（非官方）</th><th>官方 App</th><th>浏览器网页版</th></tr></thead>
-<tbody>
-<tr><th>界面来源</th><td data-label="本 App（非官方）">官方开源项目 chat-demo</td><td data-label="官方 App">官方原生界面</td><td data-label="浏览器网页版">官方网页</td></tr>
-<tr><th>安装方式</th><td data-label="本 App（非官方）">手动装 APK</td><td data-label="官方 App">应用商店</td><td data-label="浏览器网页版">不需要</td></tr>
-<tr><th>桌面图标</th><td data-label="本 App（非官方）">有，独立入口</td><td data-label="官方 App">有</td><td data-label="浏览器网页版">需「添加到主屏幕」</td></tr>
-<tr><th>登录方式</th><td data-label="本 App（非官方）">自己的 API Key，按量计费</td><td data-label="官方 App">官方账号</td><td data-label="浏览器网页版">官方账号</td></tr>
-<tr><th>数据落地</th><td data-label="本 App（非官方）">全部在本机</td><td data-label="官方 App">官方服务端</td><td data-label="浏览器网页版">浏览器存储</td></tr>
-<tr><th>更新</th><td data-label="本 App（非官方）">手动下载新 APK</td><td data-label="官方 App">商店自动更新</td><td data-label="浏览器网页版">自动</td></tr>
-</tbody>
-</table>
-</div>
-<p>要官方账号登录、官方服务和自动更新，请装官方 App。这个项目的价值是：界面来自官方的开源实现，功能完整，且完全跑在你自己的 API Key 上。</p>
+<section class="sec" id="install">
+  <div class="container">
+    <p class="eyebrow rise">Install</p>
+    <h2 class="rise">三步装上，两分钟</h2>
+    <div class="steps">
+      <div class="step rise"><h3>下载 APK</h3><p>在 Releases 页面取最新的 <span class="inline-code">deepseek-chat-0.1.0.apk</span>，约 4.9 MB。</p></div>
+      <div class="step rise"><h3>允许安装</h3><p>点开文件。系统提示「未知来源」时，允许当前浏览器或文件管理器安装。</p></div>
+      <div class="step rise"><h3>填入 Key</h3><p>打开 App，在设置里粘贴 <a href="https://platform.deepseek.com/api_keys" style="color:#9db0ff">DeepSeek API Key</a>，开始对话。</p></div>
+    </div>
+    <p class="hint rise">装完建议核对 SHA-256，每个 Release 正文都写了对应值。<span class="sep">·</span>iOS 与鸿蒙不支持</p>
+  </div>
+</section>
 
-<h2>常见问题</h2>
+<section class="sec" id="faq">
+  <div class="container">
+    <p class="eyebrow rise">FAQ</p>
+    <h2 class="rise">常见问题</h2>
+    <div class="faq rise">
+      <details open><summary>这是 DeepSeek 官方发布的 App 吗？</summary><p>不是。这是第三方打包的社区项目，只复用官方开源的 chat-demo 网页界面。官方渠道只有应用商店里的 DeepSeek App 和 chat.deepseek.com。</p></details>
+      <details><summary>用这个 App 需要付费吗？</summary><p>App 本身免费开源。对话走 DeepSeek API，按官方价格从你自己的账户扣费，需要先在 <a href="https://platform.deepseek.com/api_keys" style="color:#9db0ff">platform.deepseek.com</a> 申请 API Key 并充值。</p></details>
+      <details><summary>支持哪些安卓版本？</summary><p>Android 7.0（API 24）及以上，且系统 WebView 版本不低于 105。旧机型 WebView 偏低时，可以在应用商店更新「Android System WebView」。</p></details>
+      <details><summary>和官方 App 比少了什么？</summary><p>没有官方账号体系、没有官方 App 特有的多模态功能，不能自动更新。数据都留在本机，换机要自己导出导入。</p></details>
+      <details><summary>APK 安全吗？怎么验证？</summary><p>源码在 GitHub 公开，可以自行构建比对。每个 Release 都给出安装包的 SHA-256 和签名证书 SHA-256，发布后没有再改包；签名用固定的正式密钥，后续版本可覆盖安装。</p></details>
+      <details><summary>安装时被 Play Protect 拦截怎么办？</summary><p>手动安装、未上架商店的小体积包常被拦。确认来源是本仓库 Releases 后可以继续；若系统只给「取消」，可临时关闭 Play 保护机制校验，装完再打开。</p></details>
+      <details><summary>支持 iOS 或鸿蒙吗？</summary><p>不支持。仓库只有 Android 工程。iPhone 可以把网页版添加到主屏幕，鸿蒙 NEXT 不在支持范围内。</p></details>
+      <details><summary>会收集或上传我的数据吗？</summary><p>App 没有埋点、没有第三方统计，只有 DeepSeek API 一个网络出口。API Key 和会话存在本机 WebView 存储里，系统备份已关闭（allowBackup=false），卸载会清空数据。</p></details>
+    </div>
+  </div>
+</section>
 
-<details open>
-<summary>这是 DeepSeek 官方发布的 App 吗？</summary>
-<p>不是。这是第三方打包的社区项目，只复用官方开源的 chat-demo 网页界面。官方渠道只有应用商店里的 DeepSeek App 和 <code>chat.deepseek.com</code>。</p>
-</details>
-
-<details>
-<summary>用这个 App 需要付费吗？</summary>
-<p>App 本身免费开源。对话走 DeepSeek API，按官方价格从你自己的账户扣费，需要先在 <a href="https://platform.deepseek.com/api_keys">platform.deepseek.com</a> 申请 API Key 并充值。</p>
-</details>
-
-<details>
-<summary>支持哪些安卓版本？</summary>
-<p>Android 7.0（API 24）及以上，且系统 WebView 版本不低于 105。旧机型 WebView 偏低时，可以在应用商店更新「Android System WebView」。</p>
-</details>
-
-<details>
-<summary>和官方 App 比少了什么？</summary>
-<p>没有官方账号体系、没有官方 App 特有的多模态功能，不能自动更新。数据都留在本机，换机要自己导出导入。</p>
-</details>
-
-<details>
-<summary>APK 安全吗？怎么验证？</summary>
-<p>源码在 GitHub 公开，可以自行构建比对。每个 Release 都给出安装包的 SHA-256 和签名证书 SHA-256，发布后没有再改包；签名用固定的正式密钥，后续版本可覆盖安装。</p>
-</details>
-
-<details>
-<summary>安装时被 Play Protect 拦截怎么办？</summary>
-<p>手动安装、未上架商店的小体积包常被拦。确认来源是本仓库 Releases 后可以继续；若系统只给「取消」，可临时关闭 Play 保护机制校验，装完再打开。</p>
-</details>
-
-<details>
-<summary>支持 iOS 或鸿蒙吗？</summary>
-<p>不支持。仓库只有 Android 工程。iPhone 可以把网页版添加到主屏幕，鸿蒙 NEXT 不在支持范围内。</p>
-</details>
-
-<details>
-<summary>会收集或上传我的数据吗？</summary>
-<p>App 没有埋点、没有第三方统计，只有 DeepSeek API 一个网络出口。API Key 和会话存在本机 WebView 存储里，系统备份已关闭（<code>allowBackup=false</code>），卸载会清空数据。</p>
-</details>
-
-<h2>自己构建</h2>
-<p>需要 Node.js 22.12+、pnpm、JDK 21 和 Android SDK（platform 36 / build-tools 36）。</p>
-<pre class="cmd"><code>git clone --recurse-submodules https://github.com/xlicz/deepseek-chat.git
-cd deepseek-chat
-pnpm install
-export JAVA_HOME=&lt;JDK 21 路径&gt;
-export ANDROID_HOME=&lt;Android SDK 路径&gt;
-pnpm apk:debug</code></pre>
-<p class="note">产物在 <code>android/app/build/outputs/apk/debug/app-debug.apk</code>。完整说明见仓库 <a href="https://github.com/xlicz/deepseek-chat#readme">README</a>。</p>
+<section class="sec" style="padding-top:20px">
+  <div class="container">
+    <div class="cta rise">
+      <h2>装一个，试试看</h2>
+      <p>4.9 MB，不注册、不绑定账号，卸载即清空。</p>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/xlicz/deepseek-chat/releases/latest">下载最新 APK</a>
+        <a class="btn ghost" href="https://github.com/xlicz/deepseek-chat/issues">提个 issue</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <p>非官方社区项目，与 DeepSeek 公司没有隶属或合作关系。「DeepSeek」是其所有者的商标，这里只用来说明 App 接入的服务。</p>
-  <p><a href="https://github.com/xlicz/deepseek-chat">GitHub 仓库</a> · <a href="https://github.com/xlicz/deepseek-chat/releases">全部版本</a> · <a href="https://github.com/xlicz/deepseek-chat/issues">反馈问题</a> · <a href="https://github.com/xlicz/deepseek-chat/blob/main/LICENSE">MIT 许可证</a></p>
+  <div class="container foot">
+    <div>
+      <div style="color:#dbe1ee;font-weight:600">DeepSeek Chat for Android</div>
+      <p class="disclaimer">非官方社区项目，与 DeepSeek 公司没有隶属或合作关系。「DeepSeek」是其所有者的商标，这里只用来说明 App 接入的服务。</p>
+    </div>
+    <div class="foot-links">
+      <a href="https://github.com/xlicz/deepseek-chat">GitHub</a>
+      <a href="https://github.com/xlicz/deepseek-chat/releases">全部版本</a>
+      <a href="https://github.com/xlicz/deepseek-chat/blob/main/README.md">README</a>
+      <a href="https://github.com/xlicz/deepseek-chat/blob/main/llms.txt">llms.txt</a>
+      <a href="https://github.com/xlicz/deepseek-chat/blob/main/LICENSE">MIT</a>
+    </div>
+  </div>
 </footer>
 
 </div>
+
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll(); addEventListener('scroll', onScroll, {passive:true});
+
+  var items = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window)) { items.forEach(function(el){ el.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+  items.forEach(function(el, i){ el.style.transitionDelay = Math.min(i % 6, 5) * 55 + 'ms'; io.observe(el); });
+
+  var fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if (fine) {
+    document.querySelectorAll('.card').forEach(function(card){
+      card.addEventListener('pointermove', function(ev){
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (ev.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (ev.clientY - r.top) + 'px');
+      });
+    });
+  }
+})();
+</script>
 </body>
 </html>
