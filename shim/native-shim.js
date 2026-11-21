@@ -132,4 +132,30 @@
   } else {
     document.addEventListener('DOMContentLoaded', watch, { once: true })
   }
+
+  // 首屏真正画出来（#root 有内容）后再通知原生收起启动画面，避免中间夹一段空白页
+  const signalReady = () => {
+    requestAnimationFrame(() => requestAnimationFrame(() => void native('contentReady').catch(() => {})))
+  }
+  const waitForFirstPaint = () => {
+    const startedAt = performance.now()
+    const painted = () => {
+      const root = document.getElementById('root')
+      return !!root && root.childElementCount > 0
+    }
+    const tick = () => {
+      // 页面本身没内容（离线、加载失败）时也別一直挂着，交给原生侧兜底
+      if (painted() || performance.now() - startedAt > 1500) {
+        signalReady()
+        return
+      }
+      requestAnimationFrame(tick)
+    }
+    tick()
+  }
+  if (document.readyState === 'complete') {
+    waitForFirstPaint()
+  } else {
+    window.addEventListener('load', waitForFirstPaint, { once: true })
+  }
 })()

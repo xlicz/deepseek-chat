@@ -146,6 +146,15 @@ public class AppShellPlugin extends Plugin {
         });
     }
 
+    /** 网页首屏已绘制完成，通知壳层收起启动画面。 */
+    @PluginMethod
+    public void contentReady(PluginCall call) {
+        if (getActivity() instanceof MainActivity) {
+            ((MainActivity) getActivity()).onContentReady();
+        }
+        call.resolve();
+    }
+
     @Override
     protected void handleOnConfigurationChanged(Configuration newConfig) {
         super.handleOnConfigurationChanged(newConfig);
