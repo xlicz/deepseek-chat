@@ -27,8 +27,8 @@ cpSync(path.join(root, 'shim', 'native-shim.js'), path.join(www, 'native-shim.js
 // 外壳脚本须先于应用脚本（defer）执行，放在 <head> 开头
 // 外壳改名：上游把界面标题写成了「API 使用 demo」，这里换成正式的应用名
 const renames = [
-  ['API 使用 demo', 'DeepSeek Chat'],
-  ['API usage demo', 'DeepSeek Chat'],
+  ['API 使用 demo', 'Rosie'],
+  ['API usage demo', 'Rosie'],
 ]
 const renameIn = (file) => {
   const text = readFileSync(file, 'utf8')

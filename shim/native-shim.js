@@ -163,8 +163,8 @@
   const metaText = (version) => {
     const lang = String(document.documentElement.lang || navigator.language || '').toLowerCase()
     return lang.startsWith('zh')
-      ? `DeepSeek Chat for Android · v${version} · 非官方客户端`
-      : `DeepSeek Chat for Android · v${version} · unofficial client`
+      ? `Rosie · v${version} · 非官方 DeepSeek 客户端`
+      : `Rosie · v${version} · unofficial DeepSeek client`
   }
   const injectAppMeta = (version) => {
     const panels = document.querySelectorAll('[role="tabpanel"]')
