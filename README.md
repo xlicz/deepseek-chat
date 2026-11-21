@@ -32,8 +32,8 @@
 | ------------ | ---------------------------------------------------------------------- |
 | 应用名       | DeepSeek Chat（桌面图标下方显示）                                      |
 | 包名         | `com.deepseekchat.android`                                             |
-| 最新版本     | v0.1.4                                                                 |
-| 安装包       | `deepseek-chat-0.1.4.apk`，约 5.5 MB，正式密钥签名                     |
+| 最新版本     | v0.1.5                                                                 |
+| 安装包       | `deepseek-chat-0.1.5.apk`，约 5.3 MB，正式密钥签名                     |
 | 系统要求     | Android 7.0（API 24）及以上，系统 WebView 105 及以上                   |
 | 上游依据     | [chat-demo](https://github.com/deepseek-ai/chat-demo) v0.1.1           |
 | 技术栈       | Capacitor 8 + Android WebView + Java + Gradle                          |
@@ -57,9 +57,9 @@
 安装包没有上架任何应用商店，只能这样手动安装。下载后建议核对 SHA-256，每个 Release 的正文里都写了对应值：
 
 ```sh
-sha256sum deepseek-chat-0.1.4.apk
+sha256sum deepseek-chat-0.1.5.apk
 # macOS
-shasum -a 256 deepseek-chat-0.1.4.apk
+shasum -a 256 deepseek-chat-0.1.5.apk
 ```
 
 ## 功能
