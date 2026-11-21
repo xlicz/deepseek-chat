@@ -3,6 +3,8 @@ package com.deepseekchat.android;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
@@ -12,8 +14,10 @@ import android.view.Window;
 import android.webkit.MimeTypeMap;
 import androidx.activity.result.ActivityResult;
 import androidx.core.content.FileProvider;
+import androidx.core.content.pm.PackageInfoCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
+import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
@@ -153,6 +157,24 @@ public class AppShellPlugin extends Plugin {
             ((MainActivity) getActivity()).onContentReady();
         }
         call.resolve();
+    }
+
+    /** 应用名与版本号，供设置页展示。 */
+    @PluginMethod
+    public void getAppInfo(PluginCall call) {
+        JSObject info = new JSObject();
+        info.put("packageName", getContext().getPackageName());
+        try {
+            PackageInfo packageInfo = getContext()
+                .getPackageManager()
+                .getPackageInfo(getContext().getPackageName(), 0);
+            info.put("versionName", packageInfo.versionName == null ? "" : packageInfo.versionName);
+            info.put("versionCode", PackageInfoCompat.getLongVersionCode(packageInfo));
+        } catch (PackageManager.NameNotFoundException e) {
+            info.put("versionName", "");
+            info.put("versionCode", 0);
+        }
+        call.resolve(info);
     }
 
     @Override

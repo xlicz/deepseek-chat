@@ -158,4 +158,70 @@
   } else {
     window.addEventListener('load', waitForFirstPaint, { once: true })
   }
+
+  // 设置面板底部显示应用名与版本号
+  const metaText = (version) => {
+    const lang = String(document.documentElement.lang || navigator.language || '').toLowerCase()
+    return lang.startsWith('zh')
+      ? `DeepSeek Chat for Android · v${version} · 非官方客户端`
+      : `DeepSeek Chat for Android · v${version} · unofficial client`
+  }
+  const injectAppMeta = (version) => {
+    const panels = document.querySelectorAll('[role="tabpanel"]')
+    panels.forEach((panel) => {
+      const existing = panel.querySelector(':scope > .ds-app-meta')
+      if (existing) {
+        // 切换界面语言后跟着改文案
+        const text = metaText(version)
+        if (existing.textContent !== text) {
+          existing.textContent = text
+        }
+        return
+      }
+      const dialog = panel.closest('[role="dialog"]')
+      if (!dialog || !dialog.querySelector('[role="tablist"]')) {
+        return
+      }
+      const meta = document.createElement('div')
+      meta.className = 'ds-app-meta'
+      meta.textContent = metaText(version)
+      meta.style.cssText = [
+        'margin:18px 0 2px',
+        'padding-top:14px',
+        'border-top:1px solid currentColor',
+        'border-color:color-mix(in srgb, currentColor 12%, transparent)',
+        'font-size:12px',
+        'line-height:1.5',
+        'letter-spacing:.02em',
+        'text-align:center',
+        'color:inherit',
+        'opacity:.45',
+        'user-select:text',
+      ].join(';')
+      panel.appendChild(meta)
+    })
+  }
+  const watchAppMeta = () => {
+    void native('getAppInfo')
+      .then((info) => {
+        const version = (info && info.versionName) || ''
+        if (!version) {
+          return
+        }
+        injectAppMeta(version)
+        // 切换设置分组时 React 会重建面板，重新补上
+        const observer = new MutationObserver(() => injectAppMeta(version))
+        observer.observe(document.body, { childList: true, subtree: true })
+        new MutationObserver(() => injectAppMeta(version)).observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ['lang'],
+        })
+      })
+      .catch(() => {})
+  }
+  if (document.readyState === 'complete') {
+    watchAppMeta()
+  } else {
+    window.addEventListener('load', watchAppMeta, { once: true })
+  }
 })()
