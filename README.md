@@ -32,8 +32,8 @@
 | ------------ | ---------------------------------------------------------------------- |
 | 应用名       | DeepSeek Chat（桌面图标下方显示）                                      |
 | 包名         | `com.deepseekchat.android`                                             |
-| 最新版本     | v0.1.2                                                                 |
-| 安装包       | `deepseek-chat-0.1.2.apk`，约 5.7 MB，正式密钥签名                     |
+| 最新版本     | v0.1.3                                                                 |
+| 安装包       | `deepseek-chat-0.1.3.apk`，约 5.4 MB，正式密钥签名                     |
 | 系统要求     | Android 7.0（API 24）及以上，系统 WebView 105 及以上                   |
 | 上游依据     | [chat-demo](https://github.com/deepseek-ai/chat-demo) v0.1.1           |
 | 技术栈       | Capacitor 8 + Android WebView + Java + Gradle                          |
@@ -57,9 +57,9 @@
 安装包没有上架任何应用商店，只能这样手动安装。下载后建议核对 SHA-256，每个 Release 的正文里都写了对应值：
 
 ```sh
-sha256sum deepseek-chat-0.1.2.apk
+sha256sum deepseek-chat-0.1.3.apk
 # macOS
-shasum -a 256 deepseek-chat-0.1.2.apk
+shasum -a 256 deepseek-chat-0.1.3.apk
 ```
 
 ## 功能
@@ -192,6 +192,7 @@ android/               Capacitor 8 安卓工程
 - 导出和打开文件时，内容以 base64 在网页和原生之间传递，几百 MB 的大文件可能内存不足。
 - 只在 Android 16 模拟器上验证过，真机覆盖有限。遇到问题请开 issue 并附上机型、系统版本和 WebView 版本。
 - 未上架应用商店，没有自动更新，也不提供官方账号登录。
+- 应用图标是社区风格的二次元插画，作者与原始出处未确认，仅用作这个非官方项目的视觉标识；MIT 许可证只覆盖仓库代码，不覆盖图标。如果原作者希望撤下，开个 issue 会立刻更换。
 
 ## 相关项目
 
