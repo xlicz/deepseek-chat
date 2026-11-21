@@ -1,11 +1,11 @@
-# DeepSeek Chat for Android（非官方 APK）
+# Rosie — 非官方 DeepSeek 安卓客户端（APK）
 
 [![Release](https://img.shields.io/github/v/release/xlicz/deepseek-chat?style=flat-square&label=release)](../../releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/xlicz/deepseek-chat/total?style=flat-square)](../../releases)
 [![Android](https://img.shields.io/badge/Android-7.0%2B-3ddc84?style=flat-square&logo=android&logoColor=white)](#系统要求)
 [![License](https://img.shields.io/github/license/xlicz/deepseek-chat?style=flat-square)](LICENSE)
 
-**DeepSeek Chat for Android 是一个非官方的 DeepSeek 安卓客户端**：它把 DeepSeek 官方开源的网页版界面 [chat-demo](https://github.com/deepseek-ai/chat-demo) 打包成安卓 APK，用系统 WebView 加载，直接调用 DeepSeek API。它不重新实现界面，也没有自建后端或中转服务器。
+**Rosie 是一个非官方的 DeepSeek 安卓客户端**：它把 DeepSeek 官方开源的网页版界面 [chat-demo](https://github.com/deepseek-ai/chat-demo) 打包成安卓 APK，用系统 WebView 加载，直接调用 DeepSeek API。它不重新实现界面，也没有自建后端或中转服务器。
 
 适合想用一个独立图标、不经过浏览器、又能保留网页版全部功能的安卓用户。安装包在 [Releases](../../releases) 里，免费下载。
 
@@ -30,7 +30,7 @@
 
 | 项目         | 值                                                                     |
 | ------------ | ---------------------------------------------------------------------- |
-| 应用名       | DeepSeek Chat（桌面图标下方显示）                                      |
+| 应用名       | Rosie（桌面图标下方显示）                                              |
 | 包名         | `com.deepseekchat.android`                                             |
 | 最新版本     | v0.1.9                                                                 |
 | 安装包       | `deepseek-chat-0.1.9.apk`，约 5.3 MB，正式密钥签名                     |

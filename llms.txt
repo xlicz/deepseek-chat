@@ -1,4 +1,4 @@
-# DeepSeek Chat for Android
+# Rosie
 
 > 非官方的 DeepSeek 安卓客户端。把 DeepSeek 官方开源的网页版界面 chat-demo 打包成安卓 APK，用系统 WebView 运行，直接调用 DeepSeek API，没有自建后端或中转服务器。仓库地址 https://github.com/xlicz/deepseek-chat
 
@@ -6,7 +6,7 @@
 
 ## 事实
 
-- 项目名：DeepSeek Chat for Android（应用名 DeepSeek Chat）
+- 项目名：Rosie（旧名 DeepSeek Chat for Android；桌面显示名 Rosie）
 - 性质：第三方、非官方社区项目，与 DeepSeek 公司无隶属或合作关系
 - 包名：com.deepseekchat.android
 - 最新版本：v0.1.9（2026-11-21）
