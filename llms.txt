@@ -9,8 +9,8 @@
 - 项目名：DeepSeek Chat for Android（应用名 DeepSeek Chat）
 - 性质：第三方、非官方社区项目，与 DeepSeek 公司无隶属或合作关系
 - 包名：com.deepseekchat.android
-- 最新版本：v0.1.5（2026-11-21）
-- 安装包：deepseek-chat-0.1.5.apk，约 5.3 MB，SHA-256 536c48fec11fa2cc477942f052c32fea38b3acec7c9c3c617b60cc6bd2bc31a6
+- 最新版本：v0.1.6（2026-11-21）
+- 安装包：deepseek-chat-0.1.6.apk，约 5.4 MB，SHA-256 05d55d56cbd660182c99a90a92449f36a2d22f12fff4a19825f131a33cd393a8
 - 系统要求：Android 7.0（API 24）及以上，系统 WebView 105 及以上
 - 上游：github.com/deepseek-ai/chat-demo v0.1.1（git 子模块，源码未修改）
 - 技术栈：Capacitor 8、Android WebView、Java、Gradle
