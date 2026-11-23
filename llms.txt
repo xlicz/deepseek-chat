@@ -9,8 +9,8 @@
 - 项目名：Rosie（旧名 DeepSeek Chat for Android；桌面显示名 Rosie）
 - 性质：第三方、非官方社区项目，与 DeepSeek 公司无隶属或合作关系
 - 包名：com.deepseekchat.android
-- 最新版本：v0.1.9（2026-11-21）
-- 安装包：deepseek-chat-0.1.9.apk，约 5.3 MB，SHA-256 3add40e85ace5bb3bccaf50ffb84a1fba4ea7f9114d0a9876e6bfba7cae377cd
+- 最新版本：v0.1.10（2026-11-24）
+- 安装包：deepseek-chat-0.1.10.apk，约 5.4 MB，SHA-256 aec16b8952da5c975396ee8543975dd7fd7a1b7545418fe1964c385fb2299575
 - 系统要求：Android 7.0（API 24）及以上，系统 WebView 105 及以上
 - 上游：github.com/deepseek-ai/chat-demo v0.1.1（git 子模块，源码未修改）
 - 技术栈：Capacitor 8、Android WebView、Java、Gradle
