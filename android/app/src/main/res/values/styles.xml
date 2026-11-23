@@ -13,13 +13,12 @@
         <item name="android:windowBackground">@color/app_background</item>
     </style>
 
-    <!-- 启动画面：页面背景色 + 专用圆形位图。
-         不能用 @mipmap/ic_launcher*：API 26+ 会解析成自适应图标（方形蓝底层），
-         不给自适应图标加遮罩的 ROM 会画出一块方图。splash_icon 放在 drawable-nodpi，
-         四角透明，按 Android 12 规范画在 288dp 画布、直径 192dp 的圆内，加不加遮罩结果都一样。 -->
+    <!-- 启动画面：只有页面底色，不放图标。
+         Android 12+ 无法关闭系统启动画面，且会把图标裁成圆形，和桌面上的圆角矩形对不上；
+         桌面启动动画本身已从图标放大到窗口，再叠一个图标是多余的。 -->
     <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/app_background</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon_none</item>
         <item name="postSplashScreenTheme">@style/AppTheme.NoActionBar</item>
     </style>
 </resources>

@@ -32,8 +32,8 @@
 | ------------ | ---------------------------------------------------------------------- |
 | 应用名       | Rosie（桌面图标下方显示）                                              |
 | 包名         | `com.deepseekchat.android`                                             |
-| 最新版本     | v0.1.10                                                                |
-| 安装包       | `deepseek-chat-0.1.10.apk`，约 5.4 MB，正式密钥签名                    |
+| 最新版本     | v0.1.11                                                                |
+| 安装包       | `deepseek-chat-0.1.11.apk`，约 5.3 MB，正式密钥签名                    |
 | 系统要求     | Android 7.0（API 24）及以上，系统 WebView 105 及以上                   |
 | 上游依据     | [chat-demo](https://github.com/deepseek-ai/chat-demo) v0.1.1           |
 | 技术栈       | Capacitor 8 + Android WebView + Java + Gradle                          |
@@ -57,9 +57,9 @@
 安装包没有上架任何应用商店，只能这样手动安装。下载后建议核对 SHA-256，每个 Release 的正文里都写了对应值：
 
 ```sh
-sha256sum deepseek-chat-0.1.10.apk
+sha256sum deepseek-chat-0.1.11.apk
 # macOS
-shasum -a 256 deepseek-chat-0.1.10.apk
+shasum -a 256 deepseek-chat-0.1.11.apk
 ```
 
 ## 功能
@@ -77,7 +77,7 @@ WebView 比浏览器少一些能力，App 外壳补齐了这些场景：
 | 浅色 / 深色主题       | 状态栏、导航栏背景和图标颜色跟随页面             |
 | 语音输入              | 首次使用时请求麦克风权限                         |
 | 全面屏与刘海屏        | 内容延伸到状态栏和导航栏下方                     |
-| 冷启动                | 启动画面一直挂到网页画好第一帧，再整层淡出       |
+| 冷启动                | 只铺页面底色、不放图标，网页画好第一帧后淡出     |
 | 界面标题与版本        | 应用名 Rosie，设置页底部显示版本号               |
 
 ## 和官方 App、网页版的区别

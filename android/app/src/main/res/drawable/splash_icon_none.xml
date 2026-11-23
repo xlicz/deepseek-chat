@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 启动画面不放图标：桌面启动动画已经把点中的图标放大成窗口，这里只留页面底色 -->
+<color xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@android:color/transparent" />
