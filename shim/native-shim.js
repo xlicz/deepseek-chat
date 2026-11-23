@@ -87,6 +87,10 @@
       new KeyboardEvent('keydown', { key: 'Escape', code: 'Escape', bubbles: true })
     )
   window.__chatShellBack = () => {
+    // 「用量与余额」页面开着时先关它
+    if (typeof window.__rosieUsageBack === 'function' && window.__rosieUsageBack()) {
+      return true
+    }
     if (document.querySelector('[role="dialog"]')) {
       escape()
       return true

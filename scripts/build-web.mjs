@@ -23,6 +23,7 @@ run(['build'])
 rmSync(www, { recursive: true, force: true })
 cpSync(dist, www, { recursive: true })
 cpSync(path.join(root, 'shim', 'native-shim.js'), path.join(www, 'native-shim.js'))
+cpSync(path.join(root, 'shim', 'usage-page.js'), path.join(www, 'usage-page.js'))
 
 // 外壳脚本须先于应用脚本（defer）执行，放在 <head> 开头
 // 外壳改名：上游把界面标题写成了「API 使用 demo」，这里换成正式的应用名
@@ -54,7 +55,7 @@ walk(www)
 
 const indexPath = path.join(www, 'index.html')
 const html = readFileSync(indexPath, 'utf8')
-const tag = '<script src="native-shim.js"></script>'
+const tag = '<script src="native-shim.js"></script><script src="usage-page.js"></script>'
 if (!html.includes(tag)) {
   const injected = html.replace(/<head>/i, `<head>${tag}`)
   if (injected === html) {

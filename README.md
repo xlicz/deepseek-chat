@@ -32,8 +32,8 @@
 | ------------ | ---------------------------------------------------------------------- |
 | 应用名       | Rosie（桌面图标下方显示）                                              |
 | 包名         | `com.deepseekchat.android`                                             |
-| 最新版本     | v0.1.11                                                                |
-| 安装包       | `deepseek-chat-0.1.11.apk`，约 5.3 MB，正式密钥签名                    |
+| 最新版本     | v0.1.12                                                                |
+| 安装包       | `deepseek-chat-0.1.12.apk`，约 5.3 MB，正式密钥签名                    |
 | 系统要求     | Android 7.0（API 24）及以上，系统 WebView 105 及以上                   |
 | 上游依据     | [chat-demo](https://github.com/deepseek-ai/chat-demo) v0.1.1           |
 | 技术栈       | Capacitor 8 + Android WebView + Java + Gradle                          |
@@ -57,9 +57,9 @@
 安装包没有上架任何应用商店，只能这样手动安装。下载后建议核对 SHA-256，每个 Release 的正文里都写了对应值：
 
 ```sh
-sha256sum deepseek-chat-0.1.11.apk
+sha256sum deepseek-chat-0.1.12.apk
 # macOS
-shasum -a 256 deepseek-chat-0.1.11.apk
+shasum -a 256 deepseek-chat-0.1.12.apk
 ```
 
 ## 功能
@@ -78,6 +78,7 @@ WebView 比浏览器少一些能力，App 外壳补齐了这些场景：
 | 语音输入              | 首次使用时请求麦克风权限                         |
 | 全面屏与刘海屏        | 内容延伸到状态栏和导航栏下方                     |
 | 冷启动                | 只铺页面底色、不放图标，网页画好第一帧后淡出     |
+| 用量与余额            | 侧栏入口：账户余额、API Key、本机用量估算        |
 | 界面标题与版本        | 应用名 Rosie，设置页底部显示版本号               |
 
 ## 和官方 App、网页版的区别
@@ -135,6 +136,7 @@ App 没有埋点、没有第三方统计，只有 DeepSeek API 一个网络出�
 
 - API Key 和设置存在 App 私有的 WebView localStorage；会话和附件存在 IndexedDB。这些都只在本机，不上传到本项目。
 - 发送对话、上传附件、使用语音时，内容直接发往 `https://api.deepseek.com`，不经过其他服务器；联网搜索开启时，查询词会由 DeepSeek 服务端处理。
+- 侧栏「用量与余额」页面：余额通过 `GET https://api.deepseek.com/user/balance` 实时查询；用量是按本机聊天记录里的 token 数和官方价目估算的，不含其他设备和其他应用的调用，实际扣费以 DeepSeek 开放平台账单为准。
 - 已关闭系统备份（`allowBackup=false`），手机备份不会带走 API Key 和会话。
 - 卸载 App 会清空全部本地数据。需要保留时，先在设置里导出历史。
 
